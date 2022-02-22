@@ -1,1 +1,1 @@
-rootProject.name = "intellij-goenv"
+rootProject.name = "goenv"

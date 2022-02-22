@@ -101,8 +101,8 @@ tasks {
     }
 
     signPlugin {
-        certificateChain.set(File("./.keys/chain.crt").readText(Charsets.UTF_8))
-        privateKey.set(File("./.keys/private.pem").readText(Charsets.UTF_8))
+        certificateChain.set(System.getenv()["CERTIFICATE_CHAIN"] ?: File("./.keys/chain.crt").readText(Charsets.UTF_8))
+        privateKey.set(System.getenv()["PRIVATE_KEY"] ?: File("./.keys/private.pem").readText(Charsets.UTF_8))
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
     }
 

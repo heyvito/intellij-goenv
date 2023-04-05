@@ -14,7 +14,6 @@ class PostStartupHandler : StartupActivity {
             ApplicationManager.getApplication().runReadAction {
                 val files =
                     FilenameIndex.getVirtualFilesByName(
-                        project,
                         ".goenv",
                         true,
                         GlobalSearchScope.projectScope(project)
